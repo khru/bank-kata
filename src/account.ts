@@ -1,9 +1,11 @@
+import TransactionRepository from "./transaction-repository";
+
 export default class Account {
 
     console: any;
     repository: any;
 
-    constructor(console: any, repository: any) {
+    constructor(console: any, repository: TransactionRepository) {
         this.console = console;
         this.repository = repository;
     }
