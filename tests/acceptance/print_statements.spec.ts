@@ -3,8 +3,10 @@ import Account from "../../src/account";
 describe('statements printing', () => {
     it('displays statements', () => {
         const console = jest.fn();
+        const transactionRepository = jest.fn();
         const account = new Account(
-            console
+            console,
+            transactionRepository
         )
 
         account.deposit(1000)
