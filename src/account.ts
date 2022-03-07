@@ -9,7 +9,7 @@ export default class Account {
     }
 
     deposit(amount: number): void {
-        throw new Error("Not implemented");
+        this.repository.add(amount)
     }
 
     withdrawal(amount: number): void {

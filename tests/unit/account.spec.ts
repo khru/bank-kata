@@ -13,14 +13,15 @@ describe('Account', () => {
 
     it('print a deposit statement of 1000', () => {
         const console = jest.fn();
-        const transactionRepository = jest.fn();
+        const transactionRepository = {
+            add: jest.fn()
+        };
         const account = new Account(console, transactionRepository)
 
         account.deposit(1000);
         account.printStatement()
 
-        expect(console).toHaveBeenCalledWith("Date || Amount || Balance");
-        expect(transactionRepository).toHaveBeenCalledWith(500);
+        expect(transactionRepository.add).toHaveBeenCalledWith(1000);
 
     });
 });
