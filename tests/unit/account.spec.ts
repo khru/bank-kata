@@ -9,7 +9,7 @@ describe('Account', () => {
         const account = new Account(console)
 
         account.printStatement()
-        expect(messages).toBe([
+        expect(messages).toStrictEqual([
             "Date || Amount || Balance"
         ])
     });

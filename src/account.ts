@@ -14,6 +14,6 @@ export default class Account {
     }
 
     printStatement():void {
-
+        this.console("Date || Amount || Balance");
     }
 }
