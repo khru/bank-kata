@@ -1,3 +1,5 @@
+import Account from "../../src/account";
+
 describe('statements printing', () => {
     it('displays statements', () => {
         const console = jest.fn();
@@ -7,7 +9,7 @@ describe('statements printing', () => {
 
         account.deposit(1000)
         account.deposit(2000)
-        account.deposit(500)
+        account.withdrawal(500)
 
         account.printStatement();
 
