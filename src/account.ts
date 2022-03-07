@@ -1,9 +1,10 @@
 export default class Account {
+
     console: any;
+
     constructor(console: any) {
         this.console = console;
     }
-
 
     deposit(amount: number): void {
 
@@ -13,7 +14,7 @@ export default class Account {
 
     }
 
-    printStatement():void {
+    printStatement(): void {
         this.console("Date || Amount || Balance");
     }
 }
